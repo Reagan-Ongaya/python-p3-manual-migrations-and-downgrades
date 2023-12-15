@@ -17,7 +17,7 @@ engine = create_engine('sqlite:///migrations_test.db')
 Base = declarative_base()
 
 class Student(Base):
-    __tablename__ = 'students'
+    __tablename__ = 'scholars'
 
     id = Column(Integer(), primary_key=True)
     name = Column(String(), index=True)
@@ -27,6 +27,6 @@ class Student(Base):
     enrolled_date = Column(DateTime(), default=datetime.now())
 
     def __repr__(self):
-        return f"Student {self.id}: " \
+        return f"Scholars {self.id}: " \
             + f"{self.name}, " \
             + f"Grade {self.grade}"
